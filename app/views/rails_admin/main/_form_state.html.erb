@@ -1,7 +1,7 @@
-.state-widget
-  = form.hidden_field field.method_name.to_s + '_event'
-  = field.form_value
-  :javascript
+<div class="state-widget">
+  <%= form.hidden_field field.method_name.to_s + '_event' %>
+  <%= field.form_value %>
+  <script>
     $(function() {
       $('.state-btn').off('click').click(function(e){
         e.preventDefault();
@@ -12,3 +12,5 @@
         $t.addClass('active')
       })
     })
+  </script>
+</div>
